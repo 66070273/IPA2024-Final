@@ -6,12 +6,19 @@
 #######################################################################################
 # 1. Import libraries for API requests, JSON formatting, time, os, (restconf_final or netconf_final), netmiko_final, and ansible_final.
 
-<!!!REPLACEME with code for libraries>
+from dotenv import load_dotenv
+import os
 
 #######################################################################################
 # 2. Assign the Webex access token to the variable ACCESS_TOKEN using environment variables.
 
-ACCESS_TOKEN = os.environ."<!!!REPLACEME with os.environ method and environment variable!!!>"
+load_dotenv()  # โหลดค่าจากไฟล์ .env (ถ้ามี)
+WEBEX_TOKEN = os.getenv("WEBEX_TOKEN")
+
+if not WEBEX_TOKEN:
+    raise SystemExit("ไม่พบ WEBEX_TOKEN ใน environment/.env")
+
+ACCESS_TOKEN = f"Bearer {WEBEX_TOKEN}"
 
 #######################################################################################
 # 3. Prepare parameters get the latest message for messages API.
