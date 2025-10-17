@@ -25,6 +25,7 @@ pyserial==3.5
 python-dotenv==1.1.1
 PyYAML==6.0.3
 requests==2.32.5
+requests-toolbelt==1.0.0
 resolvelib==1.0.1
 rich==14.2.0
 ruamel.yaml==0.18.15
