@@ -12,4 +12,4 @@
       delegate_to: localhost
       ansible.builtin.copy:
         content: "{{ runout.stdout[0] }}"
-        dest: "./show_run_66070273_CSR1KV-Pod1-5.txt"
+        dest: "./show_run_66070273_R5-Exam.txt"
